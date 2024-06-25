@@ -146,7 +146,7 @@ class Score:
         スコア表示用のクラス
         """
         self.score = 0
-        self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
+        self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)#変数を使うようにしたいと思う。#issue1
         self.color = (0, 0, 255)
         self.img = self.fonto.render("スコア: 0", 0, self.color)
         self.rct = self.img.get_rect()
@@ -177,7 +177,7 @@ def main():
             if event.type == pg.KEYDOWN and event.key == pg.K_SPACE:
                 beams.append(Beam(bird))  # ビームインスタンスを生成し，リストに追加
 
-        screen.blit(bg_img, [0, 0])
+        screen.blit(bg_img, [0, 0]) 
 
         for bomb in bombs:
             if bird.rct.colliderect(bomb.rct):
